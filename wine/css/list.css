@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu";
+  }
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+    background: #ffffff;
+}
+.box{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #060c21;
+    margin: 40px;
+    transition: 0.5s;
+  }
+.box:hover{
+      height: 400px;
+  }
+.box .imgbx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.box .imgbx img
+{
+ max-width: 100%;
+ opacity: 0.1;
+ transition: 0.5;
+}
+.box:hover .imgbx img{
+    opacity: 1;
+}
+.box:before{
+    contain: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background:#fff ;
+    z-index: -1;
+}
+.box:after{
+    contain: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background:#fff ;
+    z-index: -2;
+    filter: blur(40px);
+}
+
+.box  .content
+{
+position: absolute;
+bottom: 0;
+left: 10px;
+right: 10px;
+bottom: 10px;
+height: 90px;
+background: rgba(0, 0,0,.4);
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+opacity: 0;
+transition: 0.5s;
+}
+
+.box:hover .content
+{
+    opacity: 1;
+
+}
+.box  .content h2
+{font-size: 20px;
+ color:#fff;
+font-weight: 500;
+line-height: 20px;
+letter-spacing: 1px;
+}
+.box  .content h2 span 
+{
+    font-size: 14px;
+    color:#fff;
+   font-weight: 200;
+   letter-spacing: 1px;
+}
